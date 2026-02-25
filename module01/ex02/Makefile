@@ -1,13 +1,12 @@
-NAME = phonebook
+NAME = brain
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = phonebook.cpp contact.cpp main.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 
-all = $(NAME)
-
+ALL = $(NAME)
 $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
@@ -15,13 +14,10 @@ $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	 rm -f $(OBJS)
 fclean: clean
-	rm -f $(NAME)
+	 rm -f $(NAME)
 
 re: fclean all
 
 .PHONY: all clean fclean re
-
-
-
