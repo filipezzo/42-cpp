@@ -6,7 +6,7 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 15:14:41 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:20:47 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:38:35 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class WrongAnimal {
 		std::string _type;
 	public:
 		WrongAnimal();
+		WrongAnimal(const std::string &type);
 		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal& operator=(const WrongAnimal& other);
 		virtual ~WrongAnimal();

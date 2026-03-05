@@ -6,7 +6,7 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 13:14:02 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:13:27 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:34:55 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Animal
         std::string _type;
     public:
         Animal();
+        Animal(const std::string &type);
         Animal(const Animal &other);
         Animal &operator=(const Animal &rhs);
         virtual ~Animal();

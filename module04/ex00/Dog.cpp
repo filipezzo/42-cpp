@@ -6,14 +6,14 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 14:19:22 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:18:39 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:36:19 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal(){
+Dog::Dog() : Animal("Dog"){
     std::cout << "Dog default constructor called" << std::endl;
 }
 

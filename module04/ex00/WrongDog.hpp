@@ -6,7 +6,7 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 15:16:54 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:16:59 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:40:42 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 class WrongDog : public WrongAnimal {
 	public:
 		WrongDog();
+		WrongDog(const std::string &type);
 		WrongDog(const WrongDog& other);
 		WrongDog& operator=(const WrongDog& other);
 		~WrongDog();

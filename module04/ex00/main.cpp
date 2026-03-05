@@ -6,7 +6,7 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 14:19:31 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:23:05 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:42:13 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main()
 	const WrongAnimal* wrongCat = new WrongCat();
 
 	std::cout << "type: " << wrongMeta->getType() << " " << std::endl;
-	std::cout << "type: " << wrongCat->getType() << " " << std::endl;
+	std::cout << "type: " << wrongDog->getType() << " " << std::endl;
 	std::cout << "type: " << wrongCat->getType() << " " << std::endl;
 
 	wrongMeta->makeSound();

@@ -6,14 +6,18 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 15:17:25 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 15:23:55 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/03/05 16:41:43 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongDog.hpp"
 
-WrongDog::WrongDog(): WrongAnimal() {
+WrongDog::WrongDog(): WrongAnimal("WrongDog") {
 	std::cout << "WrongDog default constructor called" << std::endl;
+}
+
+WrongDog::WrongDog(const std::string &type): WrongAnimal(type){
+	  std::cout << "WrongDog argument constructor called" << std::endl;
 }
 
 WrongDog::WrongDog(const WrongDog& other): WrongAnimal(other) {
