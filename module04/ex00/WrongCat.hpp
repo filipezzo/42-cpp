@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 11:56:06 by fsousa            #+#    #+#             */
-/*   Updated: 2026/02/25 11:56:07 by fsousa           ###   ########.fr       */
+/*   Created: 2026/03/05 15:16:20 by fsousa            #+#    #+#             */
+/*   Updated: 2026/03/05 15:17:10 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#pragma once
 
-#include "contact.hpp"
-#define MAX_SIZE 8
+#include "WrongAnimal.hpp"
 
-class PhoneBook
-{
-private:
-    Contact _contacts[MAX_SIZE];
-    int _index;
-    int _count;
-
-public:
-    PhoneBook();
-    int getCount() const;
-    void createContact(Contact newContact);
-    void displayAll();
-    void displayContact(const std::string &indexStr);
+class WrongCat : public WrongAnimal {
+	public:
+		WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat& operator=(const WrongCat& other);
+		~WrongCat();
+		void makeSound(void) const;
 };
-
-#endif

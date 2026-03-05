@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 11:56:06 by fsousa            #+#    #+#             */
-/*   Updated: 2026/02/25 11:56:07 by fsousa           ###   ########.fr       */
+/*   Created: 2026/03/05 15:14:41 by fsousa            #+#    #+#             */
+/*   Updated: 2026/03/05 15:20:47 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#pragma once
 
-#include "contact.hpp"
-#define MAX_SIZE 8
+#include <string>
+#include <iostream>
 
-class PhoneBook
-{
-private:
-    Contact _contacts[MAX_SIZE];
-    int _index;
-    int _count;
-
-public:
-    PhoneBook();
-    int getCount() const;
-    void createContact(Contact newContact);
-    void displayAll();
-    void displayContact(const std::string &indexStr);
+class WrongAnimal {
+	protected:
+		std::string _type;
+	public:
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+		virtual ~WrongAnimal();
+		void makeSound(void) const;
+		const std::string& getType() const;
+		void setType(const std::string& type);
 };
-
-#endif
