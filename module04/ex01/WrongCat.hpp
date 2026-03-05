@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongDog.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/05 15:16:54 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 17:19:19 by fsousa           ###   ########.fr       */
+/*   Created: 2026/03/05 15:16:20 by fsousa            #+#    #+#             */
+/*   Updated: 2026/03/05 17:22:33 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
-class WrongDog : public WrongAnimal {
+class WrongCat : public WrongAnimal {
+	private:
+		Brain *_brain;
 	public:
-		WrongDog();
-		WrongDog(const WrongDog& other);
-		WrongDog& operator=(const WrongDog& other);
-		~WrongDog();
+		WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat& operator=(const WrongCat& other);
+		~WrongCat();
 		void makeSound(void) const;
 };

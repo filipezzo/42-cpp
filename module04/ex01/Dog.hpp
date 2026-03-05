@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongDog.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/05 15:16:54 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/05 17:19:19 by fsousa           ###   ########.fr       */
+/*   Created: 2026/03/05 14:09:58 by fsousa            #+#    #+#             */
+/*   Updated: 2026/03/05 17:28:57 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#include "Animal.hpp"
+#include "Brain.hpp"
+#include <string>
 
-#include "WrongAnimal.hpp"
-
-class WrongDog : public WrongAnimal {
-	public:
-		WrongDog();
-		WrongDog(const WrongDog& other);
-		WrongDog& operator=(const WrongDog& other);
-		~WrongDog();
-		void makeSound(void) const;
+class Dog : public Animal {
+    private:
+        Brain *_brain;
+    public:
+        Dog();
+        Dog(const Dog &other);
+        Dog &operator=(const Dog &rhs);
+        ~Dog();
+        void makeSound(void) const;
+        Brain * getBrain() const;
 };
