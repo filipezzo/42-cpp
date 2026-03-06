@@ -20,34 +20,39 @@ int main()
 	std::cout << "===== TESTE EX01 =====" << std::endl;
 
 	const int numAnimals = 4;
-	Animal* animals[numAnimals];
+	Animal *animals[numAnimals];
 
 	std::cout << "--- Criating animals ---" << std::endl;
-	for (int k = 0; k < numAnimals; k++) {
+	for (int k = 0; k < numAnimals; k++)
+	{
 		if (k < numAnimals / 2)
 			animals[k] = new Dog();
 		else
 			animals[k] = new Cat();
 	}
 
-	std::cout << std::endl << "--- Testing sounds ---" << std::endl;
-	for (int k = 0; k < numAnimals; k++) {
+	std::cout << std::endl
+			  << "--- Testing sounds ---" << std::endl;
+	for (int k = 0; k < numAnimals; k++)
+	{
 		animals[k]->makeSound();
 	}
 
-	std::cout << std::endl << "--- Deleting animals---" << std::endl;
-	for (int k = 0; k < numAnimals; k++) {
+	std::cout << std::endl
+			  << "--- Deleting animals---" << std::endl;
+	for (int k = 0; k < numAnimals; k++)
+	{
 		delete animals[k];
 	}
 	std::cout << std::endl;
 
 	std::cout << "1. Criando cachorro original:" << std::endl;
-	Dog* originalDog = new Dog();
+	Dog *originalDog = new Dog();
 
 	originalDog->getBrain()->setIdea(0, "Leeeeeeepo");
 
 	std::cout << "\n2. Creating copy:" << std::endl;
-	Dog* copyDog = new Dog(*originalDog);
+	Dog *copyDog = new Dog(*originalDog);
 
 	std::cout << "\n3. Deletando original:" << std::endl;
 	delete originalDog;
