@@ -12,6 +12,7 @@
 
 #include "Bureaucrat.hpp"
 
+
 AForm::AForm() : _name("Default form"), _isSigned(false), 
 _gradeToSign(150), _gradeToExecute(150){}
 
