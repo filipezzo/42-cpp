@@ -5,30 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/10 15:47:08 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/28 11:14:28 by fsousa           ###   ########.fr       */
+/*   Created: 2026/03/28 16:36:55 by fsousa            #+#    #+#             */
+/*   Updated: 2026/03/28 17:10:42 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include <iostream>
+#include <ctime>
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "Intern.hpp"
+#include <iostream>
+#include <ctime>
 
+int main() {
+	Intern someRandomIntern;
+	Bureaucrat boss("Big Boss", 1);
+	AForm* rrf;
 
-int main(void)
-{
-    Bureaucrat b("Filipe", 42);
-    Form a("42 form", 42, 150);
-    Form c("Important form", 2, 50);
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	if (rrf) {
+		boss.signForm(*rrf);
+		boss.executeForm(*rrf);
+		delete rrf; 
+	}
 
-    std::cout << b << std::endl;
-    std::cout << a << std::endl;
-    std::cout << c << std::endl;
-
-    b.signForm(a);
-    b.signForm(c);
-
-    std::cout << a << std::endl;
-    std::cout << c << std::endl;
-
-    return 0;
+	rrf = someRandomIntern.makeForm("form inexistente", "target");
+	
 }
