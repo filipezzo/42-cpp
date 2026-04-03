@@ -6,11 +6,16 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:10:29 by fsousa            #+#    #+#             */
-/*   Updated: 2026/03/29 14:50:50 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/04/03 15:24:20 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+
+ScalarConverter::ScalarConverter() {}
+ScalarConverter::ScalarConverter(const ScalarConverter& other) { (void)other; }
+ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) { (void)other; return *this; }
+ScalarConverter::~ScalarConverter() {}
 
 void ScalarConverter::convert(const std::string &str)
 {
