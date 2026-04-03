@@ -6,18 +6,18 @@
 /*   By: fsousa <fsousa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 16:27:11 by fsousa            #+#    #+#             */
-/*   Updated: 2026/04/03 15:29:58 by fsousa           ###   ########.fr       */
+/*   Updated: 2026/04/03 15:32:10 by fsousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstdlib>
 #include <exception>
+#include <cstdlib>
+#include <ctime>
 #include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
-#include <ctime>
 
 Base* generate(void) {
 	int r = std::rand() % 3;
@@ -70,13 +70,13 @@ void identify(Base& p) {
 int main() {
 	std::srand(std::time(NULL));
 
-	std::cout << "--- Test 1---" << std::endl;
+	std::cout << "Test 1" << std::endl;
 	Base* p1 = generate();
 	identify(p1);
 	identify(*p1);
 	delete p1;
 
-	std::cout << "\n--- Test 2 ---" << std::endl;
+	std::cout << "\nTest 2" << std::endl;
 	Base* p2 = generate();
 	identify(p2);
 	identify(*p2);
