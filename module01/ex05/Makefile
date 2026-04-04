@@ -6,7 +6,7 @@ SRCS = main.cpp Harl.cpp Harl.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 
-ALL = $(NAME)
+all : $(NAME)
 $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 

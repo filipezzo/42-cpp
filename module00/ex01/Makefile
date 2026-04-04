@@ -6,7 +6,7 @@ SRCS = phonebook.cpp contact.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 
-all = $(NAME)
+all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)

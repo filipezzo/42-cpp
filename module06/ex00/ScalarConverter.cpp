@@ -21,7 +21,7 @@ void ScalarConverter::convert(const std::string &str)
 {
     double value;
     char *end;
-    if (str.length() == 1 && !std::isdigit(str[0]))
+    if (str.length() == 1 && !std::isdigit(str[0])) //abcdef
         value = static_cast<double>(str[0]);
     else
     {
